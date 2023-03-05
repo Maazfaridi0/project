@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>phone wwebsite</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <img src="logo.png" alt="logo">
+            <ul class="navlist">
+                <li><a href="">Home</a></li>
+                <li><a href="">Phone</a></li>
+                <li><a href="">Accessories</a></li>
+                <li><a href="">Cart</a></li>
+            </ul>
+        </nav>
+        <div class="info">
+            <div class="overlay"></div>
+            <img src="mobile.png" class="mobile" alt="">
+            <div id="circle">
+                <div class="feat one"> <img src="tres.png" alt="">
+                <div>
+                    <h1>Camera</h1>
+                    <p>48MP,wide angle lens</p>
+            </div>
+        </div>
+                <div class="feat two"><img src="batt.png" alt="">
+                    <div>
+                        <h1>battery</h1>
+                        <p>6000MAH full day backup</p>
+                </div></div>
+                <div class="feat three"><img src="proc.png" alt="">
+                    <div>
+                        <h1>processor</h1>
+                        <p>latest processor AMD radeon</p>
+                </div></div>
+                <div class="feat four"><img src="disp.png" alt="">
+                    <div>
+                        <h1>display</h1>
+                        <p>6.5 inch screen anti glare display</p>
+                </div></div>
+            </div>
+        </div>
+        <div class="controls">
+            <img src="arr.png" id="upbtn" alt="">
+            <h3>features</h3>
+            <img src="arr.png" id="downbtn" alt="">
+        </div>
+    </div>
+    <script>
+        var circle = document.getElementById("circle")
+        var downbtn = document.getElementById("downbtn")
+        var upbtn = document.getElementById("upbtn")
+
+        var rotatevalue =circle.style.transform;
+        var rotatesum;
+
+        upbtn.onclick = function()
+        {
+            rotatesum = rotatevalue + "rotate(-90deg)";
+            circle.style.transform = rotatesum;
+            rotatevalue = rotatesum;
+        }
+       downbtn.onclick = function()
+        {
+            rotatesum = rotatevalue + "rotate(90deg)";
+            circle.style.transform = rotatesum;
+            rotatevalue = rotatesum;
+        }
+    </script>
+</body>
+</html>
